@@ -4,8 +4,8 @@
 #include "pymapiutil.h"
 %}
 
-typedef unsigned long BOOKMARK;
-%apply unsigned long {BOOKMARK};
+typedef ULONG_PTR BOOKMARK;
+%apply ULONG_PTR {BOOKMARK};
 
 // A MAPIUID is close enough to an IID for now!
 %typemap(python,in) MAPIUID *INPUT(MAPIUID temp)
